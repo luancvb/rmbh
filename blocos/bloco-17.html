@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloco 17 &middot; Filiados da Grande BH</title>
+<meta name="description" content="Filiados 401 a 425 da lista da Grande BH.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>&#128227;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/estilo.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="nav-topo">
+    <a class="voltar" href="../index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>Todos os blocos</a>
+    <span class="espaco"></span>
+    <a class="voltar" href="bloco-16.html">Bloco 16</a>
+    <a class="voltar" href="bloco-18.html">Bloco 18</a>
+  </div>
+
+  <header class="topo">
+    <div class="eyebrow">
+      <span class="dot"></span> Regi&atilde;o Metropolitana de BH
+      <span>/</span><span>Bloco 17 de 24</span>
+      <span>/</span><span>filiados 401&ndash;425</span>
+    </div>
+    <h1>Bloco 17</h1>
+    <p class="sub">25 filiados. Cada bot&atilde;o abre a conversa no WhatsApp j&aacute; com a mensagem escrita e marca
+      o filiado como enviado.</p>
+
+    <section class="painel" aria-label="Progresso">
+      <div class="painel-topo">
+        <div class="metrica"><span class="n verde" id="m-feitos">0</span><span class="rot">Enviados</span></div>
+        <div class="metrica"><span class="n" id="m-faltam">0</span><span class="rot">Faltam</span></div>
+        <div class="barra-geral">
+          <div class="barra"><i id="barra-geral" style="width:0%"></i></div>
+          <div class="barra-legenda" id="legenda-geral"></div>
+        </div>
+      </div>
+      <div class="controles">
+        <div class="chips" role="group" aria-label="Filtrar filiados">
+          <button class="chip" id="f-todos" data-filtro="todos" aria-pressed="true" type="button">Todos</button>
+          <button class="chip" id="f-pendentes" data-filtro="pendentes" aria-pressed="false" type="button">Pendentes</button>
+          <button class="chip" id="f-enviados" data-filtro="enviados" aria-pressed="false" type="button">Enviados</button>
+        </div>
+        <label class="busca">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input id="busca" type="search" placeholder="Buscar nome, cidade ou n&uacute;mero" autocomplete="off">
+        </label>
+        <button class="btn-txt" id="btn-zerar" type="button">Zerar este bloco</button>
+      </div>
+    </section>
+
+    <details class="msg" id="painel-msg">
+      <summary>
+        Mensagem enviada
+        <span class="tag" id="tag-saudacao" hidden>boa noite</span>
+        <svg class="seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </summary>
+      <div class="msg-corpo">
+        <textarea id="txt-msg" spellcheck="false" aria-label="Texto da mensagem"></textarea>
+        <p class="msg-nota">Se quiser uma sauda&ccedil;&atilde;o autom&aacute;tica, escreva <code>{saudacao}</code> no texto: vira
+          <strong>bom dia</strong>, <strong>boa tarde</strong> ou <strong>boa noite</strong> conforme a hora do clique.</p>
+        <div class="msg-acoes">
+          <button class="btn-txt" id="btn-restaurar" type="button">Restaurar texto original</button>
+        </div>
+      </div>
+    </details>
+  </header>
+
+  <main class="blocos" id="blocos"></main>
+  <div class="vazio" id="vazio" hidden>Nenhum filiado com esse filtro.</div>
+
+  <footer>Bloco 17 de 24 &middot; filiados 401 a 425 de 599. As marca&ccedil;&otilde;es ficam salvas apenas no navegador de quem est&aacute; usando.</footer>
+</div>
+
+<script>window.PAGINA = { modo: "lista", bloco: 17, raiz: "../" };</script>
+<script src="../dados/contatos.js"></script>
+<script src="../assets/js/app.js"></script>
+</body>
+</html>
