@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filiados da Grande BH</title>
+<meta name="description" content="Chamada por WhatsApp para os filiados da Regi&atilde;o Metropolitana de BH, em blocos de 25.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2226%22 font-size=%2226%22>&#128227;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="./assets/css/estilo.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="topo">
+    <div class="eyebrow">
+      <span class="dot"></span> Regi&atilde;o Metropolitana de BH
+      <span>/</span><span id="eyebrow-total"></span>
+      <span>/</span><span id="eyebrow-blocos"></span>
+    </div>
+    <h1>Filiados da Grande BH</h1>
+    <p class="sub">Escolha um bloco para abrir a lista de filiados dele. Dentro do bloco, cada bot&atilde;o abre
+      a conversa no WhatsApp j&aacute; com a mensagem escrita. Mande o link de um bloco para cada pessoa da equipe.</p>
+
+    <section class="painel" aria-label="Progresso">
+      <div class="painel-topo">
+        <div class="metrica"><span class="n verde" id="m-feitos">0</span><span class="rot">Enviados</span></div>
+        <div class="metrica"><span class="n" id="m-faltam">0</span><span class="rot">Faltam</span></div>
+        <div class="barra-geral">
+          <div class="barra"><i id="barra-geral" style="width:0%"></i></div>
+          <div class="barra-legenda" id="legenda-geral"></div>
+        </div>
+      </div>
+      <div class="controles">
+        <button class="btn-txt" id="btn-zerar" type="button">Zerar marca&ccedil;&otilde;es</button>
+      </div>
+    </section>
+
+    <details class="msg" id="painel-msg">
+      <summary>
+        Mensagem enviada
+        <span class="tag" id="tag-saudacao" hidden>boa noite</span>
+        <svg class="seta" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </summary>
+      <div class="msg-corpo">
+        <textarea id="txt-msg" spellcheck="false" aria-label="Texto da mensagem"></textarea>
+        <p class="msg-nota"><code>{contagem}</code> vira a frase da contagem regressiva
+          (&ldquo;Faltam s&oacute; 16 dias para a elei&ccedil;&atilde;o.&rdquo;), calculada at&eacute; 03/10 na hora do clique;
+          <code>{dias}</code> traz s&oacute; o n&uacute;mero e <code>{saudacao}</code> vira
+          <strong>bom dia</strong>, <strong>boa tarde</strong> ou <strong>boa noite</strong> conforme o hor&aacute;rio.</p>
+        <div class="msg-acoes">
+          <button class="btn-txt" id="btn-restaurar" type="button">Restaurar texto original</button>
+        </div>
+      </div>
+    </details>
+  </header>
+
+  <main class="blocos" id="blocos"></main>
+  <div class="vazio" id="vazio" hidden>Nenhum filiado com esse filtro.</div>
+
+  <footer>599 filiados de 27 cidades, sem repeti&ccedil;&otilde;es, divididos em 24 blocos de at&eacute; 25. As marca&ccedil;&otilde;es ficam salvas apenas no navegador de cada pessoa.</footer>
+</div>
+
+<script>window.PAGINA = { modo: "indice", bloco: null, raiz: "./" };</script>
+<script src="./dados/contatos.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
