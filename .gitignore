@@ -1,0 +1,18 @@
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editores
+.vscode/
+.idea/
+*.swp
+
+# python (scripts da pasta ferramentas/)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# temporários do Excel
+~$*.xlsx
